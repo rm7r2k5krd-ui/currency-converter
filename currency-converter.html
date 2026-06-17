@@ -188,6 +188,61 @@
       margin: 28px 0;
       display: none;
     }
+
+    .banner {
+      margin-top: 32px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      border: 1px solid #1e293b;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .banner-icons {
+      display: flex;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .coin {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .coin-usd { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; }
+    .coin-eur { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: #fff; }
+    .coin-gbp { background: linear-gradient(135deg, #8b5cf6, #6d28d9); color: #fff; }
+    .coin-jpy { background: linear-gradient(135deg, #ef4444, #b91c1c); color: #fff; }
+
+    .banner-text {
+      flex: 1;
+    }
+
+    .banner-title {
+      color: #e2e8f0;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .banner-sub {
+      color: #475569;
+      font-size: 11px;
+    }
+
+    .globe-icon {
+      flex-shrink: 0;
+      opacity: 0.4;
+    }
   </style>
 </head>
 <body>
@@ -212,6 +267,26 @@
     </div>
 
     <div class="rate-timestamp" id="timestamp"></div>
+
+    <div class="banner">
+      <div class="banner-icons">
+        <div class="coin coin-usd">$</div>
+        <div class="coin coin-eur">€</div>
+        <div class="coin coin-gbp">£</div>
+        <div class="coin coin-jpy">¥</div>
+      </div>
+      <div class="banner-text">
+        <div class="banner-title">Live Exchange Rates</div>
+        <div class="banner-sub">Powered by open.er-api.com · 35+ global currencies</div>
+      </div>
+      <svg class="globe-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" stroke="#6366f1" stroke-width="1.5"/>
+        <ellipse cx="20" cy="20" rx="8" ry="18" stroke="#6366f1" stroke-width="1.5"/>
+        <line x1="2" y1="20" x2="38" y2="20" stroke="#6366f1" stroke-width="1.5"/>
+        <line x1="4" y1="13" x2="36" y2="13" stroke="#6366f1" stroke-width="1"/>
+        <line x1="4" y1="27" x2="36" y2="27" stroke="#6366f1" stroke-width="1"/>
+      </svg>
+    </div>
   </div>
 
   <script>
